@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require ('cors');
 
 const app = express();
 
 // Configurar body-parser para analizar las solicitudes en formato JSON
 app.use(bodyParser.json());
+app.use(cors());
 
 // Definir las rutas y controladores de tu API REST
 // Ejemplo:
@@ -21,7 +23,7 @@ app.get('/despedir', (req, res) => {
         nombre: 'Joaquin',
         edad: 26,
         apellido: 'Olmos',
-        trabajando: false,
+        trabajando: true,
         telefonos: {
             movil: 35165156,
             fijo: 5646546,
