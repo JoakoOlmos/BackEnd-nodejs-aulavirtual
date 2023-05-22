@@ -17,7 +17,17 @@ app.get('/despedir', (req, res) => {
   });
 
   app.get('/perfil', (req, res) => {
-    res.send('¡Mi nombre es Joaquin!');
+    const perfil = {
+        nombre: 'Joaquin',
+        edad: 26,
+        apellido: 'Olmos',
+        trabajando: false,
+        telefonos: {
+            movil: 35165156,
+            fijo: 5646546,
+        }
+    }
+    res.send(perfil);
   });
 
 // Arrancar el servidor
